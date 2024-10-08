@@ -1,22 +1,27 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "登陆 - IMS",
+};
 
 export default function LoginPage() {
   return (
     <div>
       <form action="" className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
-          <h1 className="text-3xl">请登陆</h1>
+          <h1 className="text-4xl font-medium">请登陆</h1>
           <span className="text-xs font-normal">我们需要验证您的身份信息</span>
         </div>
         <div className="flex flex-col gap-3 text-xs">
           <input
-            className="border p-3 rounded-md w-56"
+            className="border-2 p-3 w-56"
             type="text"
             id="user_account_name"
             placeholder="用户名/手机号"
           />
           <input
-            className="border p-3 rounded-md w-56"
+            className="border-2 p-3 w-56"
             type="password"
             id="user_account_password"
             placeholder="密码"
@@ -36,7 +41,7 @@ export default function LoginPage() {
         </div>
 
         <button
-          className="px-3 p-2 text-sm rounded-md bg-black text-white"
+          className="px-3 p-2 text-sm border-2 border-black hover:bg-black hover:text-white"
           type="submit"
         >
           登陆
